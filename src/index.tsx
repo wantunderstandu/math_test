@@ -1,4 +1,5 @@
-import React from 'react';
+import "babel-polyfill"
+
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
