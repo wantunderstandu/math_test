@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@baiducloud/qianfan": "^0.2.2",
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
     "@react-three/drei": "^9.119.0",
     "@react-three/fiber": "^8.17.10",
     "@testing-library/jest-dom": "^5.17.0",
@@ -13,6 +17,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "antd": "^5.22.3",
+    "mathjs": "^14.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
@@ -26,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "android": "start react-scripts start & adb reverse tcp:3000 tcp:3000 & npx cap run android --external --no-sync --port=3000 --host=127.0.0.1 --live-reload"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/three": "^0.170.0"
   }
 }

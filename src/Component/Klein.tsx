@@ -2,17 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { BufferGeometry, Float32BufferAttribute, Mesh, Vector3 } from 'three';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Reflector, Sky } from '@react-three/drei';
+import Rotate from '../util/Rotate';
+
 
 function Shape() {
-    const [rotateX, setRotateX]=useState<number>(0);
 
-    useEffect(() => {
-        const animate = () => {
-            setRotateX(prev => prev + 0.01); // 逐帧增加rotateX的值
-            requestAnimationFrame(animate); // 请求下一个动画帧
-        };
-        animate(); // 开始动画
-    }, []);
   const slices = 25;
   const stacks = 25;
 
@@ -91,14 +85,14 @@ function Shape() {
   geometry.setIndex(indices);
 
   return (
-    <mesh geometry={geometry} rotation={[45,rotateX,0]}>
+    <mesh geometry={geometry} rotation={[45,Rotate(),0]}>
       <meshStandardMaterial color="blue" />
     </mesh>
   );
 }
 
 
-
+//克莱因瓶子
 export default function Klein(){
 
     return(

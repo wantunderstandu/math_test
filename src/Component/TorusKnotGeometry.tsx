@@ -2,6 +2,8 @@ import { CameraShake, Environment, OrbitControls, Sky } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useState } from "react";
 
+
+//奇奇怪怪的扭体
 export default function TorusKnotGeometry() {
 
     const [rotateX, setRotateX]=useState<number>(0);
